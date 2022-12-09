@@ -1,17 +1,28 @@
 // es una uena practica utilizar variables para escuchar al documento
 
-const h1 = document.querySelector('h1'); // Este querySelector nos permite llamar los selectores o etiquetas, tal y como lo hace CSS.
-const p = document.querySelector('p');
-const parrafito = document.querySelector('.parrafito');
-const pid = document.querySelector('#pid');
-const input = document.querySelector('input');
+//Es una buna practica el uso de variables para escuchar el documento(es como se le llama al HTML o website)
 
-console.log(input.value);
 
-console.log({
-    h1,
-    p,
-    parrafito,
-    pid,
-    input,
-});
+
+const input = document.querySelector('#calculo');// querySelector permite "llamar" (hacer una referencia )un selector del HTML
+const input1 = document.querySelector('#calculo1');
+const btn = document.querySelector('#btncal');
+const presult = document.querySelector('#resultado');
+const form = document.getElementById('form')
+
+
+
+form.addEventListener('click', sumarValores);
+
+function sumarValores(event){
+
+    event.preventDefault();
+    
+    let result = Number(input.value) + parseInt(input1.value);
+    presult.innerHTML = 'El Resultado es: ' + result;
+}
+
+
+
+
+
